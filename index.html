@@ -71,8 +71,8 @@ justify-content: center;
     <script>
        var i;
         for(i=0;i<=6;i++){
-            document.getElementsByClass("c")[i].addEventListener("click",function (){
-switch(this.innerHTML){
+            document.addEventListener("keypress",function (event){
+switch(event.key){
     case "w":
     new Audio('tom-1.mp3').play();
 break;
