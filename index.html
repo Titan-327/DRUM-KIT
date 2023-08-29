@@ -71,29 +71,32 @@ justify-content: center;
     <script>
        var i;
         for(i=0;i<=6;i++){
-            document.getElementsByClassName("c")[i].addEventListener("click",function (){
-if(this.innerHTML==="w"){
+            document.addEventListener("click",function (event){
+switch(event.key){
+    case "w":
     new Audio('tom-1.mp3').play();
-}
- else if(this.innerHTML==="a"){
+break;
+        case "a":
     new Audio('tom-2.mp3').play();
-}
-else if(this.innerHTML==="s"){
+break;
+case "s":
     new Audio('tom-3.mp3').play();
-}
-else if(this.innerHTML==="d"){
+break;
+case "d":
     new Audio('tom-4.mp3').play();
-}
-else if(this.innerHTML==="j"){
+break;
+case "j":
     new Audio('snare.mp3').play();
-}
-else if(this.innerHTML==="k"){
+break;
+case "k":
     new Audio('crash.mp3').play();
-}
-else if(this.innerHTML==="l"){
+break;
+case "l":
     new Audio('kick-bass.mp3').play();
-}
-            });
+break;
+    default:
+        alert("Error");}}
+            );
             }
             
         
